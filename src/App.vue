@@ -2,9 +2,9 @@
   <a target="_blank" href="https://ads.google.com/intl/nl_nl/getstarted/?subid=nl-nl-ha-aw-bk-c-bau!o3~Cj0KCQjwvLOTBhCJARIsACVldV2XIvLagtKhZLsFhT3fGHi4QQc22Bv18iXgLjhIVtwhO8YSQ2N9_LkaAk4YEALw_wcB~105988451885~kwd-12340363~10963318692~459889487207&utm_source=aw&utm_medium=ha&utm_campaign=nl-nl-ha-aw-bk-c-bau!o3~Cj0KCQjwvLOTBhCJARIsACVldV2XIvLagtKhZLsFhT3fGHi4QQc22Bv18iXgLjhIVtwhO8YSQ2N9_LkaAk4YEALw_wcB~105988451885~kwd-12340363~10963318692~459889487207&gclid=Cj0KCQjwvLOTBhCJARIsACVldV2XIvLagtKhZLsFhT3fGHi4QQc22Bv18iXgLjhIVtwhO8YSQ2N9_LkaAk4YEALw_wcB&gclsrc=aw.ds">adwords</a>
     <h1 class="header">crazy frog moment!</h1>
 
-  <img class="frog" src="https://c.tenor.com/E8GnznijhxgAAAAC/frog-dancing.gif" draggable="true" />
-  <img class="frog" src="https://c.tenor.com/E8GnznijhxgAAAAC/frog-dancing.gif"  draggable="true"/>
-  <img class="frog" src="https://c.tenor.com/E8GnznijhxgAAAAC/frog-dancing.gif" draggable="true" />
+  <img ref="frog1" class="frog" src="https://c.tenor.com/E8GnznijhxgAAAAC/frog-dancing.gif" draggable="true" />
+  <img ref="frog2" class="frog" src="https://c.tenor.com/E8GnznijhxgAAAAC/frog-dancing.gif"  draggable="true"/>
+  <img ref="frog3" class="frog" src="https://c.tenor.com/E8GnznijhxgAAAAC/frog-dancing.gif" draggable="true" />
   <br>
     <div @click="right">right</div>
     <div @click="buyBoter">buy boter</div>
@@ -180,12 +180,19 @@ top: 180px;
 @keyframes frog {
   0% {
     filter: grayscale(0) sepia(1);
+    transform: scaleX(1);
+    transform: scaleY(2);
   }
   50% {
     filter: grayscale(1) sepia(0);
+    transform: scale(1.1);
+    transform: scaleY(0.7);
+    transform: scaleX(0.7);
   }
   100% {
     filter: grayscale(0) sepia(1);
+    transform: scale(1);
+    transform: scaleY(.5);
   }
 }
 
@@ -193,7 +200,6 @@ top: 180px;
   font-family: "Comic Sans MS";
   font-size: 50px;
   color: greenyellow;
-  display: flex;
 }
 
 .eating-frog {
